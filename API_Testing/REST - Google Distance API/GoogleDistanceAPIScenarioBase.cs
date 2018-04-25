@@ -29,25 +29,45 @@ namespace API_Testing.Google_Distance_API
 			}
 		}
 
-		public GoogleDistanceAPISearchFilter GoogleDistanceAPISearchFilterBuilder()
+		//public GoogleDistanceAPISearchFilter GoogleDistanceAPISearchFilterBuilder()
+		//{
+		//	return new GoogleDistanceAPISearchFilter()
+		//	{
+		//		//Key = "", // AIzaSyB41pvfD0OSloRW1fDoRQIgurftR4yQL30
+		//		Origins = "Porto Alegre",
+		//		Destinations = "São Paulo",
+		//		Units = "metric"
+		//	};
+		//}
+
+		//public GoogleDistanceAPISearchFilter GoogleDistanceAPISearchFilterBuilder(GoogleDistanceAPISearchFilter filter)
+		//{
+		//	return new GoogleDistanceAPISearchFilter()
+		//	{
+		//		Origins = filter.Origins,
+		//		Destinations = filter.Destinations,
+		//		Units = filter.Units
+		//	};
+		//}
+
+		public class GoogleDistanceAPISearchFilter
 		{
-			return new GoogleDistanceAPISearchFilter()
+			public string Origins;
+			public string Destinations;
+			public string Units; // imperial, metric
+
+			public GoogleDistanceAPISearchFilter() { }
+
+			public GoogleDistanceAPISearchFilter(string origins, string destinations, string units)
 			{
-				//Key = "", // AIzaSyB41pvfD0OSloRW1fDoRQIgurftR4yQL30
-				Origins = "Porto Alegre",
-				Destinations = "São Paulo",
-				Units = "metric"
-			};
+				Origins = origins;
+				Destinations = destinations;
+				Units = units;
+			}
 		}
 
 	}
 
 
-	public class GoogleDistanceAPISearchFilter
-	{
-		//public string Key { get; set; }
-		public string Units { get; set; }  // imperial, metric
-		public string Origins { get; set; }
-		public string Destinations { get; set; }
-	}
+
 }
