@@ -14,7 +14,7 @@ namespace API_Testing.Google_Distance_API
 		{
 			public static string GetDistance(GoogleDistanceAPISearchFilter googleDistanceAPISearchFilter)
 			{
-				return $"{ApiUrlBase}?" + //key={googleDistanceAPISearchFilter.Key}&" +
+				return $"{ApiUrlBase}?" +
 					$"units={googleDistanceAPISearchFilter.Units}&" +
 					$"origins={googleDistanceAPISearchFilter.Origins}&" +
 					$"destinations={googleDistanceAPISearchFilter.Destinations}";
@@ -28,27 +28,6 @@ namespace API_Testing.Google_Distance_API
 				return $"{ApiUrlBase}";
 			}
 		}
-
-		//public GoogleDistanceAPISearchFilter GoogleDistanceAPISearchFilterBuilder()
-		//{
-		//	return new GoogleDistanceAPISearchFilter()
-		//	{
-		//		//Key = "", // AIzaSyB41pvfD0OSloRW1fDoRQIgurftR4yQL30
-		//		Origins = "Porto Alegre",
-		//		Destinations = "São Paulo",
-		//		Units = "metric"
-		//	};
-		//}
-
-		//public GoogleDistanceAPISearchFilter GoogleDistanceAPISearchFilterBuilder(GoogleDistanceAPISearchFilter filter)
-		//{
-		//	return new GoogleDistanceAPISearchFilter()
-		//	{
-		//		Origins = filter.Origins,
-		//		Destinations = filter.Destinations,
-		//		Units = filter.Units
-		//	};
-		//}
 
 		public class GoogleDistanceAPISearchFilter
 		{
