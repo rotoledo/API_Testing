@@ -30,7 +30,7 @@ namespace RM.Services.RM_Paciente
 			string envelope = EnvelopeBuilder(readRecordEnvelopeBody);
 			var content = new StringContent(envelope, Encoding.UTF8, "text/xml");
 			httpRequestMessage = new HttpRequestMessage(HttpMethod.Post, apiUrl);
-			httpRequestMessage.Headers.Add("SOAPAction", "http://www.totvs.com.br/br/ReadRecordAuth");
+			httpRequestMessage.Headers.Add("SOAPAction", "http://www.123456789.com.br/br/ReadRecordAuth");
 			httpRequestMessage.Content = content;
 
 			// When

@@ -65,12 +65,12 @@ namespace RM.RMAgenda
 
 			public static string PostEnvelope()
 			{
-				return @"http://poavudev01/TOTVSBusinessConnect/wsDataServer.asmx";
+				return @"http://hostname/123456789BusinessConnect/wsDataServer.asmx";
 			}
 
 			public static string EnvelopeBuilder()
 			{
-				return $@"<soap:Envelope xmlns:soap=""http://www.w3.org/2003/05/soap-envelope"" xmlns:br=""http://www.totvs.com.br/br/"">
+				return $@"<soap:Envelope xmlns:soap=""http://www.w3.org/2003/05/soap-envelope"" xmlns:br=""http://www.123456789.com.br/br/"">
 							<soap:Header/>
 								<soap:Body>
 								<br:ReadRecordAuth>
@@ -78,7 +78,7 @@ namespace RM.RMAgenda
 									<br:PrimaryKey>2;997852</br:PrimaryKey>
 									<br:Contexto>CODCOLIGADA=2;CODSISTEMA=O;CODUSUARIO=mestre</br:Contexto>
 									<br:Usuario>mestre</br:Usuario>
-									<br:Senha>totvs</br:Senha>
+									<br:Senha>123456789</br:Senha>
 								</br:ReadRecordAuth >
 							</soap:Body>
 						</soap:Envelope>";

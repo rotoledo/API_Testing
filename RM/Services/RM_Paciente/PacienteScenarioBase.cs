@@ -8,15 +8,15 @@ namespace RM.Services.RM_Paciente
 {
 	public class PacienteScenarioBase
 	{
-		public static string apiUrlBase = "poad040100781";
-		public static string apiUrl = $"http://{apiUrlBase}/TOTVSBusinessConnect/wsDataServer.asmx";
+		public static string apiUrlBase = "hostname";
+		public static string apiUrl = $"http://{apiUrlBase}/123456789BusinessConnect/wsDataServer.asmx";
 		public static string contexto = "CODCOLIGADA=2;CODSISTEMA=O;CODUSUARIO=mestre";
-		public static string usuario = "mestre";
-		public static string senha = "totvs";
+		public static string usuario = "user";
+		public static string senha = "password";
 		
 		public static string EnvelopeBuilder(ReadRecordEnvelopeBody readRecordEnvelopeBody)
 		{
-			return $@"<soap:Envelope xmlns:soap=""http://www.w3.org/2003/05/soap-envelope"" xmlns:br=""http://www.totvs.com.br/br/"">
+			return $@"<soap:Envelope xmlns:soap=""http://www.w3.org/2003/05/soap-envelope"" xmlns:br=""http://www.123456789.com.br/br/"">
 							<soap:Header/>
 								<soap:Body>
 								<br:ReadRecordAuth>

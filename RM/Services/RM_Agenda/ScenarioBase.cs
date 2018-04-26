@@ -9,13 +9,13 @@ namespace RM.Services
 	public class ScenarioBase
 	{
 
-		public const string ApiUrlBase = "http://poavudev01";
+		public const string ApiUrlBase = "hostname";
 		public Dictionary<string, string> RM_Access = new Dictionary<string, string>()
 		{
-			{ "RM_Access", $"{ApiUrlBase}/TOTVSBusinessConnect/wsFormDinamico.asmx/GetJSON" }
+			{ "RM_Access", $"http://{ApiUrlBase}/123456789BusinessConnect/wsFormDinamico.asmx/GetJSON" }
 		};
-		public const string User = "totvs";
-		public const string Pword = "mestre";
+		public const string User = "user";
+		public const string Pword = "password";
 
 	}
 }
