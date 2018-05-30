@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -41,9 +42,14 @@ namespace API_Testing.SOAP___Calculator_API
 			string addResult = xmlDocument.GetElementsByTagName("AddResult").Item(0).FirstChild.Value;
 			Assert.Equal((intA + intB).ToString(), addResult);
 
-			XmlAttributes attrs = new XmlAttributes();
-			XmlRootAttribute xRoot = new XmlRootAttribute();
-			Restult restult = new Restult();
+			var myXMLStringFromDB = 
+				$@"<MedicalClearanceFormRoot><MedicalClearanceForm PassengerName='AAAAAAAAAAAAA' Age='11' PhoneNo='TTTTTTTTTTT' Email='ZZZZZZZZZZZZZZZZZZZ' BookingRefNo='11111111111111111111'/></MedicalClearanceFormRoot>";
+
+			XmlSerializer serializer = new XmlSerializer(typeof(Wrapper));
+			using (TextReader reader = new StringReader(myXMLStringFromDB))
+			{
+				Wrapper objModel = (Wrapper)serializer.Deserialize(reader);
+			}
 		}
 
 		[Theory]

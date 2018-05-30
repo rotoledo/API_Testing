@@ -91,7 +91,10 @@ namespace API_Testing
 		}
 
 		[Theory]
-		[InlineData(1500)]
+		[InlineData(300)]
+		[InlineData(500)]
+		[InlineData(800)]
+		[InlineData(1000)]
 		public async Task Get_distance_with_timeout_for_RESPONSE_TIME(int timeout)
 		{
 			// Given
